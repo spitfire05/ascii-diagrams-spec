@@ -24,8 +24,10 @@ When working with ASCII flowcharts, load this skill and use the following rules:
 - Keep the language spec self-contained; never refer to this or any other skill from the language spec.
 - Diagrams should be placed in code blocks marked with `plaintext` syntax.
 - Prefer symmetry whenever possible. Labels should be placed near middle of links or shapes they refer to. Links should connect to the middle of the shape if they are only ones, if there are more they should connect symmetrically.
-- Fit shapes as closely as possible around their contents while respecting all margin and padding restrictions. For a shape containing only a single-line label, use exactly one space on each side: `| foo |` is OK, `| foo  |` is wrong. For compound or multiline shapes, minimize the overall bounding box; individual rows may contain extra whitespace when other contents determine the required width.
-- Make the diagrams as concise as possible. Prefer links that are as short as possible while meeting the spec's minimum segment length.
+- Fit shapes as closely as possible around their contents while respecting all margin and padding restrictions. For a shape containing only a single-line label, use exactly one space on each side: `| foo |` is OK, `| foo  |` is wrong. For compound or multi-line shapes, minimize the overall bounding box; individual rows may contain extra whitespace when other contents determine the required width.
+- Make the diagrams as concise as possible. Prefer links that are as short as possible while meeting the specifications's minimum segment length.
+- Keep in mind, that flowchart diagrams can be have genral orientation of Top-Down or Left-Right. Choose the best orientation for overall size minimization and readability.
+- Every shape can have a link connected to it's top, down, left and right borders. Choose best connection point to fit the overall diagram style. Even the actor shape can have link connected to its left or right side, even though examples don't show that explicitly.
 - Among layouts that satisfy the spec and task constraints, prefer readability for the human end-user. Readability and symmetry preferences do not override mandatory requirements.
 
 ## Conformance and measurement
